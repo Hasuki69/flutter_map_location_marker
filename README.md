@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/github/license/tlserver/flutter_map_location_marker)](https://github.com/tlserver/flutter_map_location_marker/blob/master/LICENSE)
 
 `flutter_map_location_marker` is a [flutter_map](https://pub.dev/packages/flutter_map) plugin for
-displaying device's current location on a map. It provides a simple and flexible way to add a 
+displaying device's current location on a map. It provides a simple and flexible way to add a
 customizable location marker to your map.
 <br>
 <img src="https://github.com/tlserver/flutter_map_location_marker/raw/main/assets/interface.jpg" alt="Interface preview" width="400">
@@ -15,35 +15,37 @@ about `flutter_map_location_marker`, get help and help others in the #plugins ch
 
 ## Features
 
-* **Simple**: The only thing you need to do is to add a `CurrentLocationLayer()` in to your map
+- **Simple**: The only thing you need to do is to add a `CurrentLocationLayer()` in to your map
   because all parameters have good default values.
 
-* **Flexible**: The default implementation receives the device's position from
+- **Flexible**: The default implementation receives the device's position from
   the [geolocator](https://pub.dev/packages/geolocator) package and the device's heading from
   the [flutter_compass](https://pub.dev/packages/flutter_compass) package, but with type conversion,
   streams from other sources are also supported.
 
-* **Auto-following**: The map follows the new location when location is updated. This feature is
+- **Auto-following**: The map follows the new location when location is updated. This feature is
   disabled by default.
 
-* **Auto-rotating**: The map can be rotated automatically as navigation mode. This feature is
+- **Auto-rotating**: The map can be rotated automatically as navigation mode. This feature is
   disabled by default.
 
-* **Customization**: The location marker can be fully customized, including the colors of the
+- **Customization**: The location marker can be fully customized, including the colors of the
   accuracy circle and header.
 
 ## Usage
 
 1. Add `flutter_map_location_marker` to your `pubspec.yaml`:
+
    ```yaml
    dependencies:
-     flutter_map_location_marker: any # or latest verion
+     flutter_map_location_marker: any # or latest version
    ```
 
 2. Add permission by following the instructions from
    the [geolocator](https://pub.dev/packages/geolocator#usage) package.
 
 3. Add the layer widget into `FlutterMap`:
+
    ```dart
    Widget build(BuildContext context) {
      return FlutterMap(
@@ -81,7 +83,7 @@ about `flutter_map_location_marker`, get help and help others in the #plugins ch
    }
    ```
 
-5. Consider using either 
+5. Consider using either
    the [AnimatedLocationMarkerLayer](https://pub.dev/documentation/flutter_map_location_marker/latest/flutter_map_location_marker/AnimatedLocationMarkerLayer-class.html)
    or
    the [LocationMarkerLayer](https://pub.dev/documentation/flutter_map_location_marker/latest/flutter_map_location_marker/LocationMarkerLayer-class.html)
@@ -116,12 +118,12 @@ about `flutter_map_location_marker`, get help and help others in the #plugins ch
 
 ## FAQ
 
-*Q*: How to get
+_Q_: How to get
 the [positionStream](https://pub.dev/documentation/flutter_map_location_marker/5.1.0/flutter_map_location_marker/CurrentLocationLayer/positionStream.html)
 , [headingStream](https://pub.dev/documentation/flutter_map_location_marker/5.1.0/flutter_map_location_marker/CurrentLocationLayer/headingStream.html)
 or their origin streams from a CurrentLocationLayer widget?
 
-*A*: No, you should not get these streams from a CurrentLocationLayer widget. Instead, create you
+_A_: No, you should not get these streams from a CurrentLocationLayer widget. Instead, create you
 own streams with the the same types and also pass it to all the widgets which need them.
 CurrentLocationLayer doesn't own the streams; it just listens to them. You can use any
 implementation of position and heading streams, as long as the stream types are
