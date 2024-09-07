@@ -33,5 +33,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   lint: ^2.3.0
-
-flutter: null
